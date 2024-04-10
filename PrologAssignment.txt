@@ -1,0 +1,29 @@
+Antonymy (ant) is inherited via similarity (sim).
+For example, 300017024 (rare) is antonym of 300013887 (abundant) because:
+	- 300013887 (abundant) and 300016756 (scarce) are antonym
+	- 300016756 (scarce) and 300017024 (rare) are similar
+
+Hint: the relations "ant" and "sim" are symmetric. Use the goals "(ant(SS1,SS2), SS1 @< SS2)" and "(sim(SS1,SS2), SS1 @< SS2)" instead of "ant(SS1,SS2)" and "sim(SS1,SS2)" respectively in order to remove duplicates when necessary.
+
+
+Propose the following predicates:
+
+ 1. Define a predicate is_direct_antonym(+Word1,?Word2) that succeeds if Word1 is direct antonym (without inheritance) of Word2.
+
+ 2. Define a predicate is_antonym(+Word1,?Word2) that succeeds if Word1 is antonym (including inheritance via similarity) of Word2.
+
+ 3. Define a predicate all_direct_antonyms_offset_offset(+Offset,?List_of_Offsets) that succeeds if all the direct antonyms (without inheritance) of +Offset occur in List_of_Offsets and List_of_Offsets contains no repeated elements.
+
+ 4. Define a predicate all_direct_antonyms_word_offset(+Word,?List_of_Offsets) that succeeds if all the direct antonyms (without inheritance) of +Word occur in List_of_Offsets and List_of_Offsets contains no repeated elements.
+
+ 5. Define a predicate all_direct_antonyms_offset_word(+Offset,?List_of_Words) that succeeds if all the direct antonyms (without inheritance) of +Offset occur in List_of_Words and List_of_Words contains no repeated elements.
+
+ 6. Define a predicate all_direct_antonyms_word_word(+Word,?List_of_Words) that succeeds if all the direct antonyms (without inheritance) of +Word occur in List_of_Words and List_of_Words contains no repeated elements.
+
+ 7. Define a predicate all_antonyms_offset(+Offset,?List_of_Offsets) that succeeds if all the antonyms (including inheritance via similarity) of +Offset occur in List_of_Offsets and List_of_Offsets contains no repeated elements.
+
+ 8. Define a predicate all_antonyms_word(+Word,?List_of_Words) that succeeds if all the antonyms (including inheritance via similarity) of +Word occur in List_of_Words and List_of_Words contains no repeated elements.
+
+ 9. Define a predicate number_of_antonyms_offset(+Offset,?Count) that succeeds if Count is the number of different synsets which are antonym (including inheritance via similarity) of Offset.
+
+10. Define a predicate number_of_antonyms_word(+Word,?Count) that succeeds if Count is the number of different words which are antonym (including inheritance via similarity) of Word.
