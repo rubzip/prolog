@@ -1,0 +1,12 @@
+Subject,Verb,Object
+noun.animal,verb.consumption,noun.plant
+noun.animal,verb.consumption,noun.food
+noun.animal,verb.emotion,noun.feeling
+noun.person,verb.cognition,noun.artifact
+noun.person,verb.possession,noun.artifact
+noun.person,verb.creation,noun.artifact
+noun.animal,verb.stative,noun.location
+noun.person,verb.stative,noun.location
+noun.person,verb.consumption,noun.food
+noun.person,verb.motion,noun.location
+noun.animal,verb.motion,noun.location
