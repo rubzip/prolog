@@ -5,7 +5,8 @@ For example, 300017024 (rare) is antonym of 300013887 (abundant) because:
 
 Hint: the relations "ant" and "sim" are symmetric. Use the goals "(ant(SS1,SS2), SS1 @< SS2)" and "(sim(SS1,SS2), SS1 @< SS2)" instead of "ant(SS1,SS2)" and "sim(SS1,SS2)" respectively in order to remove duplicates when necessary.
 
-
+300013887, [300016756,300017024]
+abundant,[scarce,rare]
 Propose the following predicates:
 
  1. Define a predicate is_direct_antonym(+Word1,?Word2) that succeeds if Word1 is direct antonym (without inheritance) of Word2.

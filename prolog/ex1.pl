@@ -77,7 +77,7 @@ is_antonym_via_similarity(Offset1, Offset2):-
     sim(OffsetAux,Offset1)).
 
 is_antonym_offset(Offset1, Offset2):-
-    ant(Offset1,_,Offset2,_),
+    ant(Offset1,_,Offset2,_);
     is_antonym_via_similarity(Offset1, Offset2).
 
 all_antonyms_offset(Offset,List_of_Offsets):-
@@ -93,13 +93,13 @@ all_antonyms_word(Word,List_of_Words):-
     subset(Antonyms, List_of_Words).
 
 % Exercise 9
-number_of_antonyms_offset(Offset,Count):-
+number_of_antonyms_offset(Offset,Count, Names):-
     findall(X, is_antonym_offset(Offset, X), Antonyms),
-    Count==length(Antonyms).
+    findall(WW, s(Y,_,WW,_,_,_), member(Y,Antonyms), Names).
+    %Count==length(Antonyms).
 
 % Exercise 10
 number_of_antonyms_word(Word,Count):-
     s(Offset,_,Word,_,_,_),
     findall(X, is_antonym_offset(Offset, X), Antonyms),
     Count==length(Antonyms).
-
